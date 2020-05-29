@@ -71,3 +71,16 @@ print(interquartile_range)
 
 rain_std = np.std(rainfall)
 print(rain_std)
+
+----------------------------------------------
+Histogrum
+
+
+
+
+
+
+
+
+
+
