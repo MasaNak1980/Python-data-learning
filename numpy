@@ -74,6 +74,51 @@ print(rain_std)
 
 ----------------------------------------------
 Histogrum
+binomial dsitribution ３シュート入る確率2割の人が、10回シュートうって、1000回繰り返したら、
+どんな分布になるか？　それをランダムに出してくれるのが、
+np.random.binomial(500, 0.05, size=10000)
+
+It takes the following arguments:
+
+N: The number of samples or trials
+P: The probability of success
+size: The number of experiments
+
+
+import codecademylib
+import numpy as np
+from matplotlib import pyplot as plt
+
+emails = np.random.binomial(500, 0.05, size=10000)
+
+plt.hist(emails)
+plt.show()
+
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+500回メールを送って開けてくれる人は、5％　これを1000回やる
+
+
+import numpy as np
+
+emails = np.random.binomial(500, 0.05, size=10000)
+
+だれも開けてくれない確率は？
+no_emails = np.mean(emails == 0)
+print(no_emails)
+＞＞＞＞0％
+
+500人に送って、8％以上(40人以上）開けてくれる確率は
+b_test_emails = np.mean(emails >= 40)
+print(b_test_emails)
+＞＞＞＞＞0.0026
+
+
+
+
+
+
+
+
 
 
 
